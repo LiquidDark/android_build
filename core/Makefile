@@ -1270,7 +1270,6 @@ endif
 $(INSTALLED_FILES_FILE): $(FULL_SYSTEMIMAGE_DEPS)
 ifneq ($(SKIP_CHANGELOG), 1)
 	$(hide) ./vendor/liquid/tools/$(CHANGELOG_FILE)
-	$(hide) mv $(PRODUCT_OUT)/Changelog.txt $(PRODUCT_OUT)/Changelog-Liquid-$(TARGET_DEVICE).txt
 endif
 	@echo Installed file list: $@
 	@mkdir -p $(dir $@)
