@@ -921,7 +921,7 @@ ifneq ($(LIQUID_BUILD),)
 $(eval include vendor/liquid/sepolicy/sepolicy.mk)
 
 ifeq ($(BOARD_USES_QCOM_HARDWARE),true)
-$(eval include vendor/xenonhd/sepolicy/qcom/sepolicy.mk)
+$(eval include vendor/liquid/sepolicy/qcom/sepolicy.mk)
 endif
 
 # Include any vendor specific config.mk file
