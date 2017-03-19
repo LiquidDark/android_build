@@ -117,7 +117,7 @@ endif # CALLED_FROM_SETUP
 
 ifneq ($(PRINT_BUILD_CONFIG),)
 HOST_OS_EXTRA:=$(shell python -c "import platform; print(platform.platform())")
-$(info ================Team Horizon================)
+$(info ================LiquidDark================)
 $(info   LIQUID_VERSION=$(LIQUID_VERSION))
 $(info   PLATFORM_VERSION_CODENAME=$(PLATFORM_VERSION_CODENAME))
 $(info   TARGET_PRODUCT=$(TARGET_PRODUCT))
