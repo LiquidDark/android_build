@@ -784,16 +784,13 @@ else if get_stage("%(bcb_dev)s") == "3/3" then
   common.ZipWriteStr(output_zip, "viper/viper.zip",
                  ""+input_zip.read("SYSTEM/addon.d/viper.zip"))
   script.FlashViPER()
+  
+  script.Print("Flashing Magisk...")
+  common.ZipWriteStr(output_zip, "Magisk/Magisk.zip",
+                  ""+input_zip.read("SYSTEM/addon.d/Magisk.zip"))
+  script.FlashMagisk()
 
-  if block_based:
-    try:
-      common.ZipWriteStr(output_zip, "Magisk/Magisk.zip",
-                   ""+input_zip.read("SYSTEM/addon.d/Magisk.zip"))
-      script.FlashMagisk()
-    except KeyError:
-      print "Warning: Magisk.zip not available"
-
-  script.ShowProgress(0.2, 10)
+      script.ShowProgress(0.2, 10)
   device_specific.FullOTA_InstallEnd()
 
   if OPTIONS.extra_script is not None:
