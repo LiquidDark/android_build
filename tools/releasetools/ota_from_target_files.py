@@ -790,7 +790,7 @@ else if get_stage("%(bcb_dev)s") == "3/3" then
                   ""+input_zip.read("SYSTEM/addon.d/Magisk.zip"))
   script.FlashMagisk()
 
-      script.ShowProgress(0.2, 10)
+  script.ShowProgress(0.2, 10)
   device_specific.FullOTA_InstallEnd()
 
   if OPTIONS.extra_script is not None:
